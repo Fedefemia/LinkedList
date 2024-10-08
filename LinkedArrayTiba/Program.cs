@@ -17,27 +17,33 @@ namespace LinkedArrayTiba
         }
         public static void Menu()
         {
-            Console.Clear();
-            Console.WriteLine("1 Add\n2 Print");
-            string num = Console.ReadLine();
-            int numf;
-            while (!int.TryParse(num, out numf) && numf != 1 && numf != 2)
-            {
-                Console.WriteLine("Riprova");
-                num = Console.ReadLine();
-            }
-            if (numf == 1)
-            {
-                Console.WriteLine("Aggiungi");
-                string par = Console.ReadLine();
-                lista.Add(par);
-            }
-            else
-            {
-                lista.Print();
-            }
+            //Console.Clear();
+            //Console.WriteLine("1 Add\n2 Print");
+            //string num = Console.ReadLine();
+            //int numf;
+            //while (!int.TryParse(num, out numf) && numf != 1 && numf != 2)
+            //{
+            //    Console.WriteLine("Riprova");
+            //    num = Console.ReadLine();
+            //}
+            //if (numf == 1)
+            //{
+            //    Console.WriteLine("Aggiungi");
+            //    string par = Console.ReadLine();
+            //    lista.Add(par);
+            //}
+            //else
+            //{
+            //    lista.Print();
+            //}
+            //Console.ReadKey();
+            //Menu();
+
+            CLinkedList<int> lista = new CLinkedList<int>();
+            lista.Add(5);
+            lista.Remove(lista.Find(5));
+            Console.WriteLine(lista.ToString());
             Console.ReadKey();
-            Menu();
         }
     }
 }

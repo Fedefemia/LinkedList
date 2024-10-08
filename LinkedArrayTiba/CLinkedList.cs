@@ -11,44 +11,127 @@ namespace LinkedArrayTiba
     {
         private Node<T> Head;
         private Node<T> Last;
-        private Node<T> Previous;
-        private bool ein = false;
-        private int leng = 0;
+        private int Count = 0;
 
-        public void Add(T elem)
+        public void Add(T data)
         {
-            Node<T> nodon = new Node<T>(elem);
-            if (!ein)
+            Node<T> node = new Node<T>(data);
+            if (Head == null)
             {
-                Head = nodon;
-                Previous = nodon;
+                Head = node;
             }
             else
             {
-                Previous.child = nodon;
-                Previous = nodon;
+                Last.Child = node;
+                node.Parent = Last;
             }
-            ein = true;
-            Last = nodon;
-            leng++;
+            Last = node;
+            Count++;
         }
-        public void Print()
+
+        public void Clear() // -tibaldo
         {
-            if (!ein)
+            Head = null;
+            Last = null;
+            Count = 0;
+        }
+
+        public bool Contains(T data) // -tibaldo
+        {
+            Node<T> node = Head;
+            for (int i = 0; i < Count; i++)
             {
-                Console.WriteLine("No data");
+                if (EqualityComparer<T>.Default.Equals(node.Data, data)) return true;
+                node = node.Child;
+            }
+            return false;
+        }
+
+        public Node<T> Find(T data) // -tibaldo
+        {
+            Node<T> node = Head;
+            for (int i = 0; i < Count; i++)
+            {
+                if (EqualityComparer<T>.Default.Equals(node.Data, data)) return node;
+                node = node.Child;
+            }
+            return null;
+        }
+
+        public Node<T> FindLast(T data) // -tibaldo
+        {
+            Node<T> node = Head;
+            Node<T> lastNode = null;
+            for (int i = 0; i < Count; i++)
+            {
+                if (EqualityComparer<T>.Default.Equals(node.Data, data)) lastNode = node;
+                node = node.Child;
+            }
+            return lastNode;
+        }
+
+        public void Remove(Node<T> node) // -tibaldo
+        {
+            Node<T> currentNode = Head;
+            for (int i = 0; i < Count; i++)
+            {
+                if (currentNode == node)
+                {
+                    if (currentNode == Head) Head = currentNode.Child;
+                    else if (currentNode == Last) Last = currentNode.Parent;
+                    else currentNode.Parent.Child = currentNode.Child;
+                    Count--;
+                }
+                currentNode = currentNode.Child;
+            }
+        }
+
+        public void Remove(T data) // -tibaldo
+        {
+            Node<T> node = Head;
+            for (int i = 0; i < Count; i++)
+            {
+                if (EqualityComparer<T>.Default.Equals(node.Data, data))
+                {
+                    Remove(node);
+                    return;
+                }
+                node = node.Child;
+            }
+        }
+
+        public void RemoveFirst() // -tibaldo
+        {
+            if (Head == null) return;
+            Head = Head.Child;
+            Count--;
+        }
+
+        public void RemoveLast() // -tibaldo
+        {
+            if (Last == null) return;
+            Last = Last.Parent;
+            Count--;
+        }
+
+        public string ToString() // -tibaldo
+        {
+            string text = string.Empty;
+
+            if (Head == null)
+            {
+                text = "No data";
             }
             else
             {
-                Node<T> selectednode = Head;
-                Console.WriteLine(selectednode.data.ToString());
-                for (int i = 0; i < leng - 1; i++)
+                Node<T> node = Head;
+                for (int i = 0; i < Count; i++)
                 {
-                    selectednode = selectednode.child;
-                    Console.WriteLine(selectednode.data.ToString());
-
+                    text += node.Data.ToString() + " ";
+                    node = node.Child;
                 }
             }
+            return text;
         }
     }
 }

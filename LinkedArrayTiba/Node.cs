@@ -8,10 +8,13 @@ namespace LinkedArrayTiba
 {
     internal class Node<T>
     {
-        public T data;
-        public Node<T> child;
-        public Node(T elem) { 
-         this.data = elem;
+        public T Data;
+        public Node<T> Child;
+        public Node<T> Parent;
+
+        public Node(T data)
+        {
+            Data = data;
         }
     }
 }
