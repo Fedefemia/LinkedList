@@ -1,0 +1,7 @@
+C:\Users\fedee\source\repos\LinkedArrayTiba\LinkedArrayTiba\bin\Debug\LinkedArrayTiba.exe.config
+C:\Users\fedee\source\repos\LinkedArrayTiba\LinkedArrayTiba\bin\Debug\LinkedArrayTiba.exe
+C:\Users\fedee\source\repos\LinkedArrayTiba\LinkedArrayTiba\bin\Debug\LinkedArrayTiba.pdb
+C:\Users\fedee\source\repos\LinkedArrayTiba\LinkedArrayTiba\obj\Debug\LinkedArrayTiba.csproj.AssemblyReference.cache
+C:\Users\fedee\source\repos\LinkedArrayTiba\LinkedArrayTiba\obj\Debug\LinkedArrayTiba.csproj.CoreCompileInputs.cache
+C:\Users\fedee\source\repos\LinkedArrayTiba\LinkedArrayTiba\obj\Debug\LinkedArrayTiba.exe
+C:\Users\fedee\source\repos\LinkedArrayTiba\LinkedArrayTiba\obj\Debug\LinkedArrayTiba.pdb
