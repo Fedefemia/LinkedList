@@ -13,7 +13,7 @@ namespace LinkedArrayTiba
         private Node<T> Last;
         private int Count = 0;
 
-        public void Add(T data)
+        public void AddLast(T data)
         {
             Node<T> node = new Node<T>(data);
             if (Head == null)
@@ -31,11 +31,12 @@ namespace LinkedArrayTiba
 
         public void Clear()
         {
-            Node<T> node = Last;
+            Node<T> node = Head;
             for (int i = 0; i < Count; i++)
             {
-                Node<T> node1 = node.Child;
-                node = null;
+                Node<T> nextNode = node.Child;
+                node.Child = null;
+                node = nextNode;
             }
 
             Head = null;
@@ -48,7 +49,7 @@ namespace LinkedArrayTiba
             Node<T> node = Head;
             for (int i = 0; i < Count; i++)
             {
-                if (EqualityComparer<T>.Default.Equals(node.value, data)) return true;
+                if (EqualityComparer<T>.Default.Equals(node.Value, data)) return true;
                 node = node.Child;
             }
             return false;
@@ -59,7 +60,7 @@ namespace LinkedArrayTiba
             Node<T> node = Head;
             for (int i = 0; i < Count; i++)
             {
-                if (EqualityComparer<T>.Default.Equals(node.value, data)) return node;
+                if (EqualityComparer<T>.Default.Equals(node.Value, data)) return node;
                 node = node.Child;
             }
             return null;
@@ -71,7 +72,7 @@ namespace LinkedArrayTiba
             Node<T> lastNode = null;
             for (int i = 0; i < Count; i++)
             {
-                if (EqualityComparer<T>.Default.Equals(node.value, data)) lastNode = node;
+                if (EqualityComparer<T>.Default.Equals(node.Value, data)) lastNode = node;
                 node = node.Child;
             }
             return lastNode;
@@ -98,7 +99,7 @@ namespace LinkedArrayTiba
             Node<T> node = Head;
             for (int i = 0; i < Count; i++)
             {
-                if (EqualityComparer<T>.Default.Equals(node.value, data))
+                if (EqualityComparer<T>.Default.Equals(node.Value, data))
                 {
                     Remove(node);
                     return;
@@ -134,7 +135,7 @@ namespace LinkedArrayTiba
                 Node<T> node = Head;
                 for (int i = 0; i < Count; i++)
                 {
-                    text += node.value.ToString() + " ";
+                    text += node.Value.ToString() + " ";
                     node = node.Child;
                 }
             }
