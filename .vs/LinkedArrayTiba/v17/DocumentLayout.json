@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\chris\\Downloads\\LinkedList-main\\LinkedList-main\\",
+  "WorkspaceRootPath": "C:\\Users\\fedee\\LinkedList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|C:\\Users\\chris\\Downloads\\LinkedList-main\\LinkedList-main\\linkedarraytiba\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|C:\\Users\\fedee\\LinkedList\\linkedarraytiba\\clinkedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|solutionrelative:linkedarraytiba\\clinkedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|c:\\users\\fedee\\linkedlist\\linkedarraytiba\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|solutionrelative:linkedarraytiba\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|C:\\Users\\chris\\Downloads\\LinkedList-main\\LinkedList-main\\linkedarraytiba\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|C:\\Users\\fedee\\LinkedList\\linkedarraytiba\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|solutionrelative:linkedarraytiba\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|c:\\users\\chris\\downloads\\linkedlist-main\\linkedlist-main\\linkedarraytiba\\clinkedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|solutionrelative:linkedarraytiba\\clinkedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,47 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Node.cs",
-              "DocumentMoniker": "C:\\Users\\chris\\Downloads\\LinkedList-main\\LinkedList-main\\LinkedArrayTiba\\Node.cs",
-              "RelativeDocumentMoniker": "LinkedArrayTiba\\Node.cs",
-              "ToolTip": "C:\\Users\\chris\\Downloads\\LinkedList-main\\LinkedList-main\\LinkedArrayTiba\\Node.cs",
-              "RelativeToolTip": "LinkedArrayTiba\\Node.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T10:20:24.263Z",
-              "EditorCaption": ""
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Node.cs",
+              "DocumentMoniker": "C:\\Users\\fedee\\LinkedList\\LinkedArrayTiba\\Node.cs",
+              "RelativeDocumentMoniker": "LinkedArrayTiba\\Node.cs",
+              "ToolTip": "C:\\Users\\fedee\\LinkedList\\LinkedArrayTiba\\Node.cs",
+              "RelativeToolTip": "LinkedArrayTiba\\Node.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T10:20:24.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "CLinkedList.cs",
-              "DocumentMoniker": "C:\\Users\\chris\\Downloads\\LinkedList-main\\LinkedList-main\\LinkedArrayTiba\\CLinkedList.cs",
+              "DocumentMoniker": "C:\\Users\\fedee\\LinkedList\\LinkedArrayTiba\\CLinkedList.cs",
               "RelativeDocumentMoniker": "LinkedArrayTiba\\CLinkedList.cs",
-              "ToolTip": "C:\\Users\\chris\\Downloads\\LinkedList-main\\LinkedList-main\\LinkedArrayTiba\\CLinkedList.cs",
+              "ToolTip": "C:\\Users\\fedee\\LinkedList\\LinkedArrayTiba\\CLinkedList.cs",
               "RelativeToolTip": "LinkedArrayTiba\\CLinkedList.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGgAAAAlAAAA",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAowFQAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-08T09:50:41.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\chris\\Downloads\\LinkedList-main\\LinkedList-main\\LinkedArrayTiba\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\fedee\\LinkedList\\LinkedArrayTiba\\Program.cs",
               "RelativeDocumentMoniker": "LinkedArrayTiba\\Program.cs",
-              "ToolTip": "C:\\Users\\chris\\Downloads\\LinkedList-main\\LinkedList-main\\LinkedArrayTiba\\Program.cs",
+              "ToolTip": "C:\\Users\\fedee\\LinkedList\\LinkedArrayTiba\\Program.cs",
               "RelativeToolTip": "LinkedArrayTiba\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAlAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAiwCIAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-08T09:50:05.403Z",
               "EditorCaption": ""

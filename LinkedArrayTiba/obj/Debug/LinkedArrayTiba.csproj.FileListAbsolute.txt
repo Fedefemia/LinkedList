@@ -12,3 +12,10 @@ C:\Users\chris\Downloads\LinkedList-main\LinkedList-main\LinkedArrayTiba\obj\Deb
 C:\Users\chris\Downloads\LinkedList-main\LinkedList-main\LinkedArrayTiba\obj\Debug\LinkedArrayTiba.csproj.CoreCompileInputs.cache
 C:\Users\chris\Downloads\LinkedList-main\LinkedList-main\LinkedArrayTiba\obj\Debug\LinkedArrayTiba.exe
 C:\Users\chris\Downloads\LinkedList-main\LinkedList-main\LinkedArrayTiba\obj\Debug\LinkedArrayTiba.pdb
+C:\Users\fedee\LinkedList\LinkedArrayTiba\bin\Debug\LinkedArrayTiba.exe.config
+C:\Users\fedee\LinkedList\LinkedArrayTiba\bin\Debug\LinkedArrayTiba.exe
+C:\Users\fedee\LinkedList\LinkedArrayTiba\bin\Debug\LinkedArrayTiba.pdb
+C:\Users\fedee\LinkedList\LinkedArrayTiba\obj\Debug\LinkedArrayTiba.csproj.AssemblyReference.cache
+C:\Users\fedee\LinkedList\LinkedArrayTiba\obj\Debug\LinkedArrayTiba.csproj.CoreCompileInputs.cache
+C:\Users\fedee\LinkedList\LinkedArrayTiba\obj\Debug\LinkedArrayTiba.exe
+C:\Users\fedee\LinkedList\LinkedArrayTiba\obj\Debug\LinkedArrayTiba.pdb

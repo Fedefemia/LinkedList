@@ -29,8 +29,15 @@ namespace LinkedArrayTiba
             Count++;
         }
 
-        public void Clear() // -tibaldo
+        public void Clear()
         {
+            Node<T> node = Last;
+            for (int i = 0; i < Count; i++)
+            {
+                Node<T> node1 = node.Child;
+                node = null;
+            }
+
             Head = null;
             Last = null;
             Count = 0;
