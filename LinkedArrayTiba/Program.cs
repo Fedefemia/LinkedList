@@ -42,6 +42,7 @@ namespace LinkedArrayTiba
             CLinkedList<int> lista = new CLinkedList<int>();
             lista.Add(5);
             lista.Clear();
+            lista.Add(12);
             Console.WriteLine(lista.ToString());
             Console.ReadKey();
         }

@@ -48,7 +48,7 @@ namespace LinkedArrayTiba
             Node<T> node = Head;
             for (int i = 0; i < Count; i++)
             {
-                if (EqualityComparer<T>.Default.Equals(node.Data, data)) return true;
+                if (EqualityComparer<T>.Default.Equals(node.value, data)) return true;
                 node = node.Child;
             }
             return false;
@@ -59,7 +59,7 @@ namespace LinkedArrayTiba
             Node<T> node = Head;
             for (int i = 0; i < Count; i++)
             {
-                if (EqualityComparer<T>.Default.Equals(node.Data, data)) return node;
+                if (EqualityComparer<T>.Default.Equals(node.value, data)) return node;
                 node = node.Child;
             }
             return null;
@@ -71,7 +71,7 @@ namespace LinkedArrayTiba
             Node<T> lastNode = null;
             for (int i = 0; i < Count; i++)
             {
-                if (EqualityComparer<T>.Default.Equals(node.Data, data)) lastNode = node;
+                if (EqualityComparer<T>.Default.Equals(node.value, data)) lastNode = node;
                 node = node.Child;
             }
             return lastNode;
@@ -98,7 +98,7 @@ namespace LinkedArrayTiba
             Node<T> node = Head;
             for (int i = 0; i < Count; i++)
             {
-                if (EqualityComparer<T>.Default.Equals(node.Data, data))
+                if (EqualityComparer<T>.Default.Equals(node.value, data))
                 {
                     Remove(node);
                     return;
@@ -134,7 +134,7 @@ namespace LinkedArrayTiba
                 Node<T> node = Head;
                 for (int i = 0; i < Count; i++)
                 {
-                    text += node.Data.ToString() + " ";
+                    text += node.value.ToString() + " ";
                     node = node.Child;
                 }
             }

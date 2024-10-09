@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\fedee\\LinkedList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|C:\\Users\\fedee\\LinkedList\\linkedarraytiba\\clinkedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|c:\\users\\fedee\\linkedlist\\linkedarraytiba\\clinkedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|solutionrelative:linkedarraytiba\\clinkedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|c:\\users\\fedee\\linkedlist\\linkedarraytiba\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|C:\\Users\\fedee\\LinkedList\\linkedarraytiba\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FF990C1-C46D-49EB-8D13-FC002A80D223}|LinkedArrayTiba\\LinkedArrayTiba.csproj|solutionrelative:linkedarraytiba\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -36,9 +36,10 @@
               "RelativeDocumentMoniker": "LinkedArrayTiba\\Node.cs",
               "ToolTip": "C:\\Users\\fedee\\LinkedList\\LinkedArrayTiba\\Node.cs",
               "RelativeToolTip": "LinkedArrayTiba\\Node.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T10:20:24.263Z"
+              "WhenOpened": "2024-10-08T10:20:24.263Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -48,7 +49,7 @@
               "RelativeDocumentMoniker": "LinkedArrayTiba\\CLinkedList.cs",
               "ToolTip": "C:\\Users\\fedee\\LinkedList\\LinkedArrayTiba\\CLinkedList.cs",
               "RelativeToolTip": "LinkedArrayTiba\\CLinkedList.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAowFQAAAAoAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-08T09:50:41.012Z",
               "EditorCaption": ""
@@ -61,7 +62,7 @@
               "RelativeDocumentMoniker": "LinkedArrayTiba\\Program.cs",
               "ToolTip": "C:\\Users\\fedee\\LinkedList\\LinkedArrayTiba\\Program.cs",
               "RelativeToolTip": "LinkedArrayTiba\\Program.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAiwCIAAAASAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAkwCsAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-08T09:50:05.403Z",
               "EditorCaption": ""
