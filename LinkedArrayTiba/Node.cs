@@ -3,8 +3,8 @@
     internal class Node<T>
     {
         public T Value;
-        public Node<T> Child;
-        public Node<T> Parent;
+        public Node<T> Next;
+        public Node<T> Previous;
 
         public Node(T value)
         {

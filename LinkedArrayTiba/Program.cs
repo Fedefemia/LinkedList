@@ -258,7 +258,7 @@ namespace LinkedArrayTiba
                     Console.Write("Continua");
                     for (int i = 0; i < 3; i++)
                     {
-                        Thread.Sleep(100);
+                        Thread.Sleep(300);
                         Console.Write(".");
                     }
                     Console.ReadKey();

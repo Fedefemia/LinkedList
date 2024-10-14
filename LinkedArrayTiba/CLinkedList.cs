@@ -12,14 +12,14 @@ namespace LinkedArrayTiba
         public void AddAfter(Node<T> pos, Node<T> nuov)
         {
             Node<T> newNode = new Node<T>(nuov.Value);
-            newNode.Parent = pos;
+            newNode.Previous = pos;
 
-            newNode.Child = pos.Child;
-            pos.Child = newNode;
+            newNode.Next = pos.Next;
+            pos.Next = newNode;
 
-            if (newNode.Child != null)
+            if (newNode.Next != null)
             {
-                newNode.Child.Parent = newNode;
+                newNode.Next.Previous = newNode;
                 Count++;
                 return;
             }
@@ -36,16 +36,16 @@ namespace LinkedArrayTiba
             Node<T> newNode = new Node<T>(nuov.Value);
             if (pos == Head)
             {
-                newNode.Child = Head;
-                Head.Parent = newNode;
+                newNode.Next = Head;
+                Head.Previous = newNode;
                 Head = newNode;
                 Count++;
                 return;
             }
-            newNode.Parent = pos.Parent;
-            newNode.Child = pos;
-            pos.Parent.Child = newNode;
-            pos.Parent = newNode;
+            newNode.Previous = pos.Previous;
+            newNode.Next = pos;
+            pos.Previous.Next = newNode;
+            pos.Previous = newNode;
             Count++;
         }
         public void AddBefore(Node<T> pos, T data)
@@ -63,8 +63,8 @@ namespace LinkedArrayTiba
                 Count++;
                 return;
             }
-            newNode.Child = Head;
-            Head.Parent = newNode;
+            newNode.Next = Head;
+            Head.Previous = newNode;
             Head = newNode;
             Count++;
         }
@@ -78,8 +78,8 @@ namespace LinkedArrayTiba
                 Count++;
                 return;
             }
-            newNode.Child = Head;
-            Head.Parent = newNode;
+            newNode.Next = Head;
+            Head.Previous = newNode;
             Head = newNode;
             Count++;
         }
@@ -93,8 +93,8 @@ namespace LinkedArrayTiba
                 Count++;
                 return;
             }
-            Last.Child = newNode;
-            newNode.Parent = Last;
+            Last.Next = newNode;
+            newNode.Previous = Last;
             Last = newNode;
             Count++;
         }
@@ -107,8 +107,8 @@ namespace LinkedArrayTiba
             }
             else
             {
-                Last.Child = node;
-                node.Parent = Last;
+                Last.Next = node;
+                node.Previous = Last;
             }
             Last = node;
             Count++;
@@ -119,8 +119,8 @@ namespace LinkedArrayTiba
             Node<T> node = Head;
             for (int i = 0; i < Count; i++)
             {
-                Node<T> nextNode = node.Child;
-                node.Child = null;
+                Node<T> nextNode = node.Next;
+                node.Next = null;
                 node = nextNode;
             }
 
@@ -135,7 +135,7 @@ namespace LinkedArrayTiba
             for (int i = 0; i < Count; i++)
             {
                 if (EqualityComparer<T>.Default.Equals(node.Value, data)) return true;
-                node = node.Child;
+                node = node.Next;
             }
             return false;
         }
@@ -146,7 +146,7 @@ namespace LinkedArrayTiba
             for (int i = 0; i < Count; i++)
             {
                 if (EqualityComparer<T>.Default.Equals(node.Value, data)) return node;
-                node = node.Child;
+                node = node.Next;
             }
             return null;
         }
@@ -158,7 +158,7 @@ namespace LinkedArrayTiba
             for (int i = 0; i < Count; i++)
             {
                 if (EqualityComparer<T>.Default.Equals(node.Value, data)) lastNode = node;
-                node = node.Child;
+                node = node.Next;
             }
             return lastNode;
         }
@@ -169,10 +169,10 @@ namespace LinkedArrayTiba
 
             if (node == Head)
             {
-                Head = Head.Child;
+                Head = Head.Next;
                 if (Head != null)
                 {
-                    Head.Parent = null;
+                    Head.Previous = null;
                 }
                 else
                 {
@@ -181,21 +181,21 @@ namespace LinkedArrayTiba
             }
             else if (node == Last)
             {
-                Last = Last.Parent;
+                Last = Last.Previous;
                 if (Last != null)
                 {
-                    Last.Child = null;
+                    Last.Next = null;
                 }
             }
             else
             {
-                if (node.Parent != null)
+                if (node.Previous != null)
                 {
-                    node.Parent.Child = node.Child;
+                    node.Previous.Next = node.Next;
                 }
-                if (node.Child != null)
+                if (node.Next != null)
                 {
-                    node.Child.Parent = node.Parent;
+                    node.Next.Previous = node.Previous;
                 }
             }
 
@@ -215,16 +215,16 @@ namespace LinkedArrayTiba
         public void RemoveFirst()
         {
             if (Head == null) return;
-            Head = Head.Child;
-            Head.Parent = null;
+            Head = Head.Next;
+            Head.Previous = null;
             Count--;
         }
 
         public void RemoveLast()
         {
             if (Last == null) return;
-            Last = Last.Parent;
-            Last.Child = null;
+            Last = Last.Previous;
+            Last.Next = null;
             Count--;
         }
 
@@ -242,7 +242,7 @@ namespace LinkedArrayTiba
                 for (int i = 0; i < Count; i++)
                 {
                     text += node.Value.ToString() + " ";
-                    node = node.Child;
+                    node = node.Next;
                 }
             }
             return text;
