@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace LinkedArrayTiba
 {
@@ -11,8 +7,97 @@ namespace LinkedArrayTiba
     {
         private Node<T> Head;
         private Node<T> Last;
-        private int Count = 0;
 
+        private int Count = 0;
+        public void AddAfter(Node<T> pos, Node<T> nuov)
+        {
+            Node<T> newNode = new Node<T>(nuov.Value);
+            newNode.Parent = pos;
+
+            newNode.Child = pos.Child;
+            pos.Child = newNode;
+
+            if (newNode.Child != null)
+            {
+                newNode.Child.Parent = newNode;
+                Count++;
+                return;
+            }
+            Last = newNode;
+            Count++;
+        }
+        public void AddAfter(Node<T> pos, T data)
+        {
+            Node<T> newNode = new Node<T>(data);
+            AddAfter(pos, newNode);
+        }
+        public void AddBefore(Node<T> pos, Node<T> nuov)
+        {
+            Node<T> newNode = new Node<T>(nuov.Value);
+            if (pos == Head)
+            {
+                newNode.Child = Head;
+                Head.Parent = newNode;
+                Head = newNode;
+                Count++;
+                return;
+            }
+            newNode.Parent = pos.Parent;
+            newNode.Child = pos;
+            pos.Parent.Child = newNode;
+            pos.Parent = newNode;
+            Count++;
+        }
+        public void AddBefore(Node<T> pos, T data)
+        {
+            Node<T> newNode = new Node<T>(data);
+            AddBefore(pos, newNode);
+        }
+        public void AddFirst(Node<T> nuov)
+        {
+            Node<T> newNode = new Node<T>(nuov.Value);
+            if (Head == null)
+            {
+                Head = newNode;
+                Last = newNode;
+                Count++;
+                return;
+            }
+            newNode.Child = Head;
+            Head.Parent = newNode;
+            Head = newNode;
+            Count++;
+        }
+        public void AddFirst(T data)
+        {
+            Node<T> newNode = new Node<T>(data);
+            if (Head == null)
+            {
+                Head = newNode;
+                Last = newNode;
+                Count++;
+                return;
+            }
+            newNode.Child = Head;
+            Head.Parent = newNode;
+            Head = newNode;
+            Count++;
+        }
+        public void AddLast(Node<T> nuov)
+        {
+            Node<T> newNode = new Node<T>(nuov.Value);
+            if (Head == null)
+            {
+                Head = newNode;
+                Last = newNode;
+                Count++;
+                return;
+            }
+            Last.Child = newNode;
+            newNode.Parent = Last;
+            Last = newNode;
+            Count++;
+        }
         public void AddLast(T data)
         {
             Node<T> node = new Node<T>(data);
@@ -44,7 +129,7 @@ namespace LinkedArrayTiba
             Count = 0;
         }
 
-        public bool Contains(T data) // -tibaldo
+        public bool Contains(T data)
         {
             Node<T> node = Head;
             for (int i = 0; i < Count; i++)
@@ -55,7 +140,7 @@ namespace LinkedArrayTiba
             return false;
         }
 
-        public Node<T> Find(T data) // -tibaldo
+        public Node<T> Find(T data)
         {
             Node<T> node = Head;
             for (int i = 0; i < Count; i++)
@@ -66,7 +151,7 @@ namespace LinkedArrayTiba
             return null;
         }
 
-        public Node<T> FindLast(T data) // -tibaldo
+        public Node<T> FindLast(T data)
         {
             Node<T> node = Head;
             Node<T> lastNode = null;
@@ -78,51 +163,72 @@ namespace LinkedArrayTiba
             return lastNode;
         }
 
-        public void Remove(Node<T> node) // -tibaldo
+        public void Remove(Node<T> node)
         {
-            Node<T> currentNode = Head;
-            for (int i = 0; i < Count; i++)
+            if (node == null) return;
+
+            if (node == Head)
             {
-                if (currentNode == node)
+                Head = Head.Child;
+                if (Head != null)
                 {
-                    if (currentNode == Head) Head = currentNode.Child;
-                    else if (currentNode == Last) Last = currentNode.Parent;
-                    else currentNode.Parent.Child = currentNode.Child;
-                    Count--;
+                    Head.Parent = null;
                 }
-                currentNode = currentNode.Child;
+                else
+                {
+                    Last = null;
+                }
+            }
+            else if (node == Last)
+            {
+                Last = Last.Parent;
+                if (Last != null)
+                {
+                    Last.Child = null;
+                }
+            }
+            else
+            {
+                if (node.Parent != null)
+                {
+                    node.Parent.Child = node.Child;
+                }
+                if (node.Child != null)
+                {
+                    node.Child.Parent = node.Parent;
+                }
+            }
+
+            Count--;
+        }
+
+        public void Remove(T data)
+        {
+            Node<T> node = Find(data);
+            if (node != null)
+            {
+                Remove(node);
             }
         }
 
-        public void Remove(T data) // -tibaldo
-        {
-            Node<T> node = Head;
-            for (int i = 0; i < Count; i++)
-            {
-                if (EqualityComparer<T>.Default.Equals(node.Value, data))
-                {
-                    Remove(node);
-                    return;
-                }
-                node = node.Child;
-            }
-        }
 
-        public void RemoveFirst() // -tibaldo
+        public void RemoveFirst()
         {
             if (Head == null) return;
             Head = Head.Child;
+            Head.Parent = null;
             Count--;
         }
 
-        public void RemoveLast() // -tibaldo
+        public void RemoveLast()
         {
             if (Last == null) return;
             Last = Last.Parent;
+            Last.Child = null;
             Count--;
         }
 
-        public string ToString() // -tibaldo
+        public string ToString()
         {
             string text = string.Empty;
 
