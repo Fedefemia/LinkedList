@@ -228,7 +228,7 @@ namespace LinkedArrayTiba
             Count--;
         }
 
-        public string ToString()
+        public override string ToString()
         {
             string text = string.Empty;
 

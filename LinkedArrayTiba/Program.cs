@@ -22,8 +22,8 @@ namespace LinkedArrayTiba
             Console.WriteLine("5.  Aggiungere un nodo alla fine della lista.");
             Console.WriteLine("6.  Aggiungere un valore alla fine della lista.");
             Console.WriteLine("7.  Svuotare una lista.");
-            Console.WriteLine("8.  Aggiungere un valore a una lista vuota.");
-            Console.WriteLine("9.  Svuotare una lista già vuota.");
+            Console.WriteLine("8.  Aggiungere un valore a una lista.");
+            Console.WriteLine("9.  Svuotare una lista.");
             Console.WriteLine("10. Cercare un valore presente nella lista.");
             Console.WriteLine("11. Trovare un valore nella lista.");
             Console.WriteLine("12. Trovare l'ultimo valore nella lista.");
@@ -170,7 +170,7 @@ namespace LinkedArrayTiba
                 case "12":
                     Console.WriteLine("\nCaso 1: Provo a cercare un valore presente nella lista:");
                     Console.WriteLine("Lista: " + list.ToString());
-                    Console.WriteLine("Risultato cercando il numero 3: " + list.FindLast(3).Parent.Value + " (questo e' il valore del parent del nodo che la funzione ha trovato)");
+                    Console.WriteLine("Risultato cercando il numero 3: " + list.FindLast(3).Previous.Value + " (questo e' il valore del parent del nodo che la funzione ha trovato)");
                     list.Clear();
 
                     Console.WriteLine("\nCaso 2: Provo a cercare un valore mancante dalla lista:");
